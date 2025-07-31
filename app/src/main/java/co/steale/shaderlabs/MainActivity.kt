@@ -268,7 +268,7 @@ fun SimpleShader() {
     // State to store the normalized radius of the glass circle.
     var circleRadius by remember { mutableStateOf(0.15f) }
     // State to store the chromatic aberration strength.
-    var chromaticAberrationStrength by remember { mutableStateOf(0.000f) }
+    var chromaticAberrationStrength by remember { mutableStateOf(0.001f) }
     // State to store the frosted glass blur radius.
     var frostedGlassBlurRadius by remember { mutableStateOf(0.000f) }
     // Scrollstate
@@ -277,7 +277,7 @@ fun SimpleShader() {
     Column(
         modifier = Modifier
             .fillMaxSize() // Make the column fill the entire screen.
-            .background(MaterialTheme.colorScheme.secondaryContainer) // Set a blue background for the column.
+            .background(MaterialTheme.colorScheme.background) // Set a blue background for the column.
             .padding(16.dp) // Add padding around the column content.
             .onSizeChanged {
                 // Update boxSize when the size of the column changes.
@@ -338,12 +338,12 @@ fun SimpleShader() {
             Box(
                 modifier = Modifier
                     .fillMaxSize() // Make the inner box fill the parent box
-                    .background(MaterialTheme.colorScheme.onSecondaryContainer), // Set a gray background for the content.
+                    .background(MaterialTheme.colorScheme.secondaryContainer), // Set a gray background for the content.
 
             ) {
                Column(modifier = Modifier.fillMaxSize().padding(16.dp).verticalScroll(scrollState)){
-                   Text("Glass \nProperties".uppercase(), fontSize = 44.sp, lineHeight = 50.sp, color = Color.White, fontWeight = FontWeight.Bold,)
-                   Text("Glass is an amorphous solid, meaning it lacks a long-range ordered atomic structure, unlike crystalline materials. This unique atomic arrangement gives rise to its characteristic properties. Optically, glass is often transparent due to the absence of grain boundaries that scatter light, and its refractive index can be engineered for various applications. Mechanically, it is brittle, exhibiting elastic deformation up to a certain point before sudden fracture without significant plastic deformation. Its strength is highly dependent on surface imperfections. Thermally, glass is a poor conductor of heat and undergoes a continuous softening as temperature increases, rather than a sharp melting point, transitioning through a \"glass transition temperature\" where it transforms from a rigid to a more viscous state. Chemically, most common glasses are highly resistant to corrosion from water and many chemicals, though certain strong acids or bases can etch them over time.", fontSize = 14.sp,  lineHeight = 20.sp ,color = MaterialTheme.colorScheme.secondaryContainer, modifier = Modifier.padding(top = 8.dp).fillMaxWidth())
+                   Text("Glass \nProperties".uppercase(), fontSize = 44.sp, lineHeight = 50.sp, color = MaterialTheme.colorScheme.onSecondaryContainer, fontWeight = FontWeight.Bold,)
+                   Text("Glass is an amorphous solid, meaning it lacks a long-range ordered atomic structure, unlike crystalline materials. This unique atomic arrangement gives rise to its characteristic properties. Optically, glass is often transparent due to the absence of grain boundaries that scatter light, and its refractive index can be engineered for various applications. Mechanically, it is brittle, exhibiting elastic deformation up to a certain point before sudden fracture without significant plastic deformation. Its strength is highly dependent on surface imperfections. Thermally, glass is a poor conductor of heat and undergoes a continuous softening as temperature increases, rather than a sharp melting point, transitioning through a \"glass transition temperature\" where it transforms from a rigid to a more viscous state. Chemically, most common glasses are highly resistant to corrosion from water and many chemicals, though certain strong acids or bases can etch them over time.", fontSize = 14.sp,  lineHeight = 20.sp ,color = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.padding(top = 8.dp).fillMaxWidth())
                }
             }
         }
