@@ -2,6 +2,8 @@
 
 This project demonstrates a real-time glass shader effect implemented using Android's Jetpack Compose and AGSL (Android Graphics Shading Language). It allows users to interactively explore various optical properties of glass, such as refraction, specular highlights, bevels, and shadows, through a draggable lens and adjustable parameters.
 
+<img src="https://abduzeedo.com/sites/default/files/styles/max_2600x2600/public/originals/hero_glass-shader.jpg.webp?itok=1szeDzJs"/>
+
 ## Features
 
 *   **Interactive Glass Lens:** A draggable circular lens simulates looking through a piece of glass.
@@ -17,6 +19,8 @@ This project demonstrates a real-time glass shader effect implemented using Andr
     *   **Frosted Glass Blur:** (Currently subtle or placeholder) Adds a blur effect to simulate frosted glass.
 *   **AGSL Shader:** The core visual effect is powered by a custom AGSL shader.
 *   **Jetpack Compose:** The UI and interactions are built entirely with Jetpack Compose.
+
+*   Demo: https://youtube.com/shorts/fgomVJwwMFs?si=vwecFL0OU7efFNtE
 
 ## How it Works
 
